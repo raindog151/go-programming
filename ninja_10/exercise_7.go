@@ -11,6 +11,8 @@ func main() {
 	}
 
 	// the following results in deadlocks and i don't know why
+	// update: the reason why is since we don't close the channel (would need to use waitgroups or something
+	// the range function sits and waits for input indefinitely and then poops the bed
 
 	// for v := range ch {
 
